@@ -67,6 +67,7 @@ body {
   align-items: center;
 }
 
+/* ●修正開始: ピースくん画像の丸枠・object-fit対応 */
 .profile-img {
   width: 160px;
   height: 160px;
@@ -76,7 +77,9 @@ body {
   box-shadow: 0 0 32px 8px var(--accent-glow), 0 0 0 8px var(--secondary);
   margin-bottom: 1.2rem;
   background: var(--secondary);
+  display: block;
 }
+/* ●修正終了 */
 
 .profile-name {
   font-size: 2.5rem;
@@ -170,4 +173,31 @@ body {
   top: 0; left: 0; width: 100vw; height: 100vh;
   z-index: 1;
   pointer-events: none;
+}
+/* ● 追記開始: ピースくん画像の丸枠＆glowボタンホバーアニメーション */
+.peace-frame {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 24px 4px #222, 0 0 64px 8px #00f2ff66;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  margin: 0 auto 24px auto;
+  position: relative;
+}
+/* ● 追記終了 */
+
+#profileCircle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 4px solid var(--accent);
+  box-shadow: 0 0 32px 8px var(--accent);
+  transition: opacity 0.8s;
 }

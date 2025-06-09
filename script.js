@@ -66,3 +66,28 @@ function initParticles(num = 60) {
 
 initParticles();
 animate();
+
+// ●修正開始: プロフィール画像切り替えロジック（実ファイル名対応）
+(function() {
+  const circle = document.getElementById('profileCircle');
+  if (!circle) return;
+  const images = [
+    'img/profile01.jpg',
+    'img/profile02.jpg',
+    'img/profile03.jpg'
+  ];
+  let idx = 0;
+  // 初期画像
+  circle.style.backgroundImage = `url('${images[0]}')`;
+  function swapImage() {
+    idx = (idx + 1) % images.length;
+    circle.style.opacity = 0;
+    setTimeout(() => {
+      console.log('切り替え画像:', images[idx]);
+      circle.style.backgroundImage = `url('${images[idx]}')`;
+      circle.style.opacity = 1;
+    }, 800);
+  }
+  setInterval(swapImage, 5000);
+})();
+// ●修正終了

@@ -1,3 +1,4 @@
+<!-- ●修正開始: Peace Inu サイトリニューアル -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +11,11 @@
   <div class="glow-bg"></div>
   <main class="container">
     <section class="profile">
-      <img src="peace.jpg" alt="Peace the Shiba Inu" class="profile-img" />
+      <!-- ●修正開始: プロフィール画像を切り替える丸枠 -->
+      <div class="peace-frame">
+        <div id="profileCircle"></div>
+      </div>
+      <!-- ●修正終了 -->
       <h1 class="profile-name">Peace Inu</h1>
       <p class="profile-desc">The Futuristic Crypto Shiba</p>
     </section>
@@ -23,11 +28,17 @@
   <div><span>Hobby:</span> 散歩とお昼寝🐾</div>
 </div>
 
-       <button class="glow-btn">もっと見る</button>
+       <!-- ●修正開始: もっと見るボタンをaタグに修正 -->
+<a class="glow-btn" href="https://masapeace13.com" target="_blank" rel="noopener">もっと見る</a>
+<!-- ●修正終了 -->
 
     </section>
   </main>
   <canvas id="particles"></canvas>
+
+  <!-- ●修正開始: script.jsの読込位置を変更 -->
   <script src="script.js"></script>
+  <!-- ●修正終了 -->
 </body>
 </html>
+<!-- ●修正終了 -->
